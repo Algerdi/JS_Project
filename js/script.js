@@ -19,3 +19,34 @@ personalMovieDB.movies[a] = b;
 personalMovieDB.movies[c] = d;
 
 console.log(personalMovieDB);
+
+
+
+// let g;
+// if (g) {
+//     console.log('da');
+// } else {
+//     console.log('net')
+// }
+
+
+
+const num = 40;
+
+// (num == 50) ? console.log('OK!') : console.log('NO!')
+
+
+switch (num) {
+    case 49:
+        console.log('not equal');
+        break;
+    case 100:
+        console.log('not equal too');
+        break;
+    case 50:
+        console.log('OK!');
+        break;
+    default:
+        console.log('Not now');
+        break;
+}
