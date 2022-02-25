@@ -1,5 +1,7 @@
 "use strict";
 
+// _______________________Task 1_________________________________________
+
 const numberOfFilms = prompt('How much films do you watched?', '');
 
 const personalMovieDB = {
@@ -20,6 +22,9 @@ personalMovieDB.movies[c] = d;
 
 console.log(personalMovieDB);
 
+// _____________________________________________________________________
+
+
 
 
 // let g;
@@ -31,22 +36,44 @@ console.log(personalMovieDB);
 
 
 
-const num = 40;
+// const num = 40;
 
 // (num == 50) ? console.log('OK!') : console.log('NO!')
 
 
-switch (num) {
-    case 49:
-        console.log('not equal');
+// switch (num) {
+//     case 49:
+//         console.log('not equal');
+//         break;
+//     case 100:
+//         console.log('not equal too');
+//         break;
+//     case 50:
+//         console.log('OK!');
+//         break;
+//     default:
+//         console.log('Not now');
+//         break;
+// }
+
+
+
+let num = 50;
+
+// while (num < 55) {
+//     console.log(num);
+//     num++;
+// }
+
+do {
+    console.log(num);
+    ++num;
+}
+while (num < 55);
+
+for (let i = 1; i < 10; i++) {
+    if (i == 6) {
         break;
-    case 100:
-        console.log('not equal too');
-        break;
-    case 50:
-        console.log('OK!');
-        break;
-    default:
-        console.log('Not now');
-        break;
+    }
+    console.log(i);
 }
