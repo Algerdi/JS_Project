@@ -60,14 +60,18 @@ const personalMovieDB = {
             //     console.log('Invalid input!');
             //     genre = prompt(`Your ${i} favorite gengre?`);
             // }
+            // personalMovieDB.genres[i-1] = genre;
             if (genre === null || genre === '') {
                 console.log('Invalid input!');
                 i--;
             } else {
                 personalMovieDB.genres[i-1] = genre;
             }
-            // personalMovieDB.genres[i-1] = genre;
+            
         }
+        personalMovieDB.genres.forEach((item, i) => {
+            console.log(`Favorite genre ${i+1} - it's ${item}`);
+        });
     }
 };
 
