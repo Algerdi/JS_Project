@@ -1,79 +1,50 @@
 "use strict";
 
-// _______________________Task 1_________________________________________
+const box = document.getElementById('box'),
+      btns = document.getElementsByTagName('button'),
+      circles = document.getElementsByClassName('circle'),
+      wrapper = document.querySelector('.wrapper'),
+      hearts = wrapper.querySelectorAll('.heart'),
+      oneHeart = wrapper.querySelector('.heart');
 
-const numberOfFilms = prompt('How much films do you watched?', '');
+box.style.backgroundColor = 'purple';
+box.style.width = '333px';
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false,
-};
+box.style.cssText = 'background-color: blue; width: 555px';
 
-const a = prompt('Wich movie do you watched last?', ''),
-      b = prompt('How do you rate it??', ''),
-      c = prompt('Wich movie do you watched last?', ''),
-      d = prompt('How do you rate it??', '');
+btns[1].style.borderRadius = '88%';
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+circles[0].style.backgroundColor = 'brown';
 
-console.log(personalMovieDB);
-
-// _____________________________________________________________________
-
-
-
-
-// let g;
-// if (g) {
-//     console.log('da');
-// } else {
-//     console.log('net')
+// for (let i = 0; i < hearts.length; i++) {
+//     hearts[i].style.backgroundColor = 'pink';
+//     hearts[i].style.cssText = `height: 1${i*3}0px`;
 // }
 
+hearts.forEach(item => {
+    item.style.cssText = `width: 130px`;
+    item.style.backgroundColor = 'pink';
+});
 
+const div = document.createElement('div');
+// const text = document.createTextNode('hellupa');
 
-// const num = 40;
+div.classList.add('black');
+// document.querySelector('.wrapper').append(div);
+// document.querySelector('.wrapper').prepend(div);
+// hearts[0].before(div);
+// hearts[0].after(div);
 
-// (num == 50) ? console.log('OK!') : console.log('NO!')
+// circles[0].remove();
+// hearts[0].replaceWith(circles[0]);
 
+wrapper.insertBefore(div, hearts[0]);
 
-// switch (num) {
-//     case 49:
-//         console.log('not equal');
-//         break;
-//     case 100:
-//         console.log('not equal too');
-//         break;
-//     case 50:
-//         console.log('OK!');
-//         break;
-//     default:
-//         console.log('Not now');
-//         break;
-// }
+// wrapper.removeChild(hearts[1]);
 
+wrapper.replaceChild(circles[0], hearts[0])
 
+div.innerHTML = '<h1>Kapibara!</h1>';
+// div.textContent = 'Kapibara!';
 
-let num = 50;
-
-// while (num < 55) {
-//     console.log(num);
-//     num++;
-// }
-
-do {
-    console.log(num);
-    ++num;
-}
-while (num < 55);
-
-for (let i = 1; i < 10; i++) {
-    if (i == 6) {
-        break;
-    }
-    console.log(i);
-}
+div.insertAdjacentHTML('beforebegin', '<h2>Kalivanich</h2>')
